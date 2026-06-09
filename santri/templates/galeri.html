@@ -1,0 +1,54 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Galeri{% endblock %}
+{% block page_title %}HSI Boarding School{% endblock %}
+{% block subtitle %}Website Profil Santri{% endblock %}
+
+{% block content %}
+ <container class="card-container">
+    <section class="card-section">
+      <h2>FOTO RANDOM.</h2>
+      <div class="card-container">
+        <div class="card">
+          <img src="{% static 'images/kepotong.jpg' %}" alt="my motor gw">
+          <p>P balap!!!</p>
+        </div>
+        <div class="card">
+          <img src="{% static 'images/pas rmbt panjang.jpeg' %}" alt="pas masih ganteng">
+          <p> pas masih rada ganteng.</p>
+        </div>
+        <div class="card">
+          <img src="{% static 'images/varmie2.jpeg' %}" alt="varmi">
+          <p> minimal motor 2 lah bos.</p>
+        </div>
+        <div class="card">
+          <img src="{% static 'images/p gabus.jpeg' %}" alt="fotbar ama gabus">
+          <p>fotbar ama ikan gabus.</p>
+        </div>
+        <div class="card">
+          <img src="{% static 'images/gabisajelasin2.jpeg' %}" alt="ftbar sma ????">
+          <p>Fotbar sama m???.</p>
+        </div>
+      </div>
+    </section>
+   </container>
+   <container>
+    <!-- Galeri Video -->
+      <section class="card-section">
+        <h2>Karya Video sma it hsi </h2>
+        <div class="video-container">
+          <iframe width="560" height="315" 
+            src="https://www.youtube.com/embed/hSIc3bU1B14?si=n7KWutEEiJEx8vej" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>    
+          </iframe>
+        </div>
+      </section>  
+   </container>
+    
+    <footer>
+      <p>
+        © 2025 HSI Boarding School Purworejo 
+        
+      </p>
+    </footer>
+{% endblock %}

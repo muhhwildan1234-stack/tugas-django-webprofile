@@ -1,0 +1,33 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <title>{% block title %}Website Santri{% endblock %}</title>
+  <link rel="stylesheet" href="{% static 'style.css' %}">
+</head>
+
+<body>
+  <header>
+    <h1>{% block page_title %}Website Santri{% endblock %}</h1>
+    <h3>{% block subtitle %}Profil Digital{% endblock %}</h3>
+
+    <hr>
+
+    <nav>
+      <a href="{% url 'profile' %}">Beranda</a> |
+      <a href="{% url 'biodata' %}">Biodata</a> |
+      <a href="{% url 'jadwal' %}">Jadwal</a> |
+      <a href="{% url 'galeri' %}">Galeri</a> |
+      <a href="{% url 'feedback' %}">Feedback</a>
+    </nav>
+
+    <hr>
+  </header>
+
+  <main>
+    {% block content %}
+    {% endblock %}
+  </main>
+</body>
+</html>

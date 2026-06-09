@@ -1,0 +1,54 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Beranda{% endblock %}
+{% block page_title %}HSI Boarding School Purworejo{% endblock %}
+{% block subtitle %}Website Profil Sederhana — Kelas X (10c){% endblock %}
+
+{% block content %}
+
+<div class="max-w-4xl mx-auto p-6">
+
+  <!-- Sambutan -->
+  <div class="bg-white shadow rounded p-6 mb-6">
+    <h2 class="text-2xl font-bold mb-3">Selamat Datang</h2>
+    <p>
+      Selamat datang di mini website saya.<br>
+      Situs ini berisi <b>biodata</b>, <b>hobi</b>, dan <b>cita-cita</b> saya sebagai santri HSI Boarding School.<br>
+      Silakan jelajahi halaman biodata untuk mengenal saya lebih banyak.
+    </p>
+  </div>
+
+  <!-- Avatar Favorit -->
+  <div class="bg-white shadow rounded p-6 mb-6">
+    <h2 class="text-2xl font-bold mb-3">Avatar Favorit Saya</h2>
+    <p class="mb-4">Ini adalah gambar yang menggambarkan minat saya:</p>
+    <img class="rounded-lg w-64"
+      src="https://lh7-rt.googleusercontent.com/docsz/AD_4nXduCXuk8FsWhPejbP6fyDndjFp1d5Is5iCBEeWID-QJiNZmwVXjFObqntTLYIZC66ne6sTnxYcMnhl95gTFU0PTExa4vy2_q3Qwrk7AcxfPAV3LVvY7GIvxO4miuowavruS8PBeYVASBEIcCw5CUd36jnJrIWUOxOu6eK2C3HjoXCh_SVwWYx8?key=pfiTtLfCK9oc95qD-hhoZg"
+      alt="Avatar">
+  </div>
+
+  <!-- Cita-cita -->
+  <div class="bg-white shadow rounded p-6 mb-6">
+    <h2 class="text-2xl font-bold mb-3">Cita-cita</h2>
+    <p>
+      Saya ingin menjadi <b>programmer handal</b> yang mampu mengubah dunia melalui teknologi.<br>
+      Ingin menggunakan keahlian pemrograman untuk tujuan positif, keamanan siber, dan membantu masyarakat.
+    </p>
+  </div>
+
+  <!-- Tombol ke biodata -->
+  <div class="text-center mt-8">
+    <a href="{% url 'biodata' %}" 
+       class="bg-blue-600 text-white px-6 py-3 rounded hover:bg-blue-700">
+       ➡ Lihat Biodata Saya
+    </a>
+  </div>
+
+</div>
+
+<footer class="text-center mt-10 p-4 text-sm text-gray-600">
+  © 2025 HSI Boarding School Purworejo | made by utsman annadyy
+</footer>
+
+{% endblock %}

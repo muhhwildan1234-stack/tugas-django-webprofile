@@ -1,0 +1,72 @@
+{% extends 'base.html' %}
+
+{% block title %}Feedback - Website Profil Santri{% endblock %}
+{% block page_title %}HSI Boarding School{% endblock %}
+{% block subtitle %}Website Profil Santri{% endblock %}
+
+{% block content %}
+  <div class="container">
+      <div class="div">
+        <h1>Formulir umpan balik</h1>
+        <p>Kritik,saran dan masukan</p>
+      </div>
+      <hr />
+      <br />
+      <hr />
+      <div class="box-feedback">
+        <h3>Formulir dan kotak saran</h3>
+        <p>
+          berikan masukan terbaik Anda untuk pengembangan website profile ini.
+          <br />
+          Semua input bersifat wajib kecuali nama.
+        </p>
+
+        <div class="box-form">
+          <form>
+            <label>Nama anda (opsional):</label>
+            <input type="text" placeholder="Tulis nama anda" />
+
+            <label>Email anda:</label>
+            <input type="text" placeholder="Tulis email anda" />
+
+            <label>Rating kepuasan website skala (1-10)</label>
+            <input
+              type="number"
+              min="1"
+              max="10"
+              placeholder="masukan angka 1-10"
+            />
+
+            <label>Rekomendasi Website Ini?</label>
+            <div>
+              <input type="radio" name="rekom" value="ya" /> Ya, Sangat
+              <input type="radio" name="rekom" value="mungkin" /> Mungkin Saja
+              <input type="radio" name="rekom" value="tidak" /> Tidak
+            </div>
+
+            <label>Saran Pengembangan di Bidang:</label>
+            <select>
+              <option>-- Pilih Bidang --</option>
+              <option>Desain</option>
+              <option>Konten</option>
+              <option>Fitur</option>
+            </select>
+            <label>Pesan/Saran Lengkap:</label>
+            <textarea
+              placeholder="Tulis pesan dan saran Anda di sini..."
+            ></textarea>
+
+            <div class="form-buttons">
+              <button type="reset" class="reset">Atur Ulang</button>
+              <button type="submit" class="submit">Kirim Feedback</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+    <footer>
+      <p>
+        © 2025 HSI Boarding School Purworejo
+      </p>
+    </footer>
+{% endblock %}

@@ -1,0 +1,336 @@
+/* ===============================
+   GLOBAL & VARIABLES
+================================*/
+:root {
+  --primary: #4f46e5;       /* Indigo modern */
+  --primary-hover: #4338ca;
+  --bg-main: #f8fafc;       /* Off-white bersih */
+  --bg-card: #ffffff;
+  --text-main: #1e293b;     /* Slate gelap (lebih lembut dari hitam pekat) */
+  --text-muted: #64748b;
+  --border-color: #e2e8f0;  /* Border abu-abu tipis & soft */
+  --radius: 12px;
+  --shadow-sm: 0 1px 3px rgba(0,0,0,0.05);
+  --shadow-md: 0 4px 6px -1px rgba(0,0,0,0.05), 0 2px 4px -1px rgba(0,0,0,0.03);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', Arial, sans-serif;
+  background-color: var(--bg-main);
+  color: var(--text-main);
+  line-height: 1.6;
+  padding-bottom: 60px;
+}
+
+h1, h2, h3 {
+  color: var(--text-main);
+  font-weight: 700;
+  margin-bottom: 12px;
+}
+
+a {
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
+
+hr {
+  width: 90%;
+  max-width: 1100px;
+  margin: 30px auto;
+  border: 0;
+  border-top: 1px solid var(--border-color);
+}
+
+/* ===============================
+   NAVBAR (HEADER)
+================================*/
+header {
+  width: 100%;
+  background: var(--bg-card);
+  box-shadow: var(--shadow-sm);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.nav {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  padding: 16px;
+  flex-wrap: wrap;
+}
+
+.nav a {
+  color: var(--text-muted);
+  background: transparent;
+  padding: 8px 18px;
+  border-radius: 20px;
+  font-weight: 500;
+  font-size: 14px;
+}
+
+.nav a.active,
+.nav a:hover {
+  background-color: #eef2ff;
+  color: var(--primary);
+}
+
+/* ===============================
+   KOTAK / CARD CONTAINER (PROFIL)
+================================*/
+.kotak {
+  width: 90%;
+  max-width: 700px;
+  background: var(--bg-card);
+  margin: 40px auto;
+  padding: 30px;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-md);
+  border: 1px solid var(--border-color);
+  text-align: center; /* Menjaga teks profil tetap di tengah */
+}
+
+.judul-kotak {
+  color: var(--text-main);
+  border-left: 4px solid var(--primary);
+  padding-left: 12px;
+  text-align: left;
+  font-size: 22px;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+/* Avatar Foto */
+.avatar,
+.photo {
+  width: 140px;
+  height: 140px;
+  margin: 0 auto 20px auto;
+  border-radius: 50%;
+  border: 4px solid #eef2ff;
+  object-fit: cover;
+  box-shadow: var(--shadow-sm);
+  display: block;
+}
+
+/* ===============================
+   TABLE (JADWAL)
+================================*/
+.table-container {
+  width: 90%;
+  max-width: 900px;
+  margin: 30px auto;
+  background: var(--bg-card);
+  border-radius: var(--radius);
+  border: 1px solid var(--border-color);
+  box-shadow: var(--shadow-md);
+  overflow: hidden; /* Agar sudut tabel melengkung rapi */
+}
+
+.table-title {
+  padding: 20px;
+  text-align: left;
+  border-bottom: 1px solid var(--border-color);
+  color: var(--text-main);
+  font-size: 18px;
+  font-weight: 600;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th, td {
+  padding: 14px 20px;
+  text-align: left;
+}
+
+th {
+  background-color: #f8fafc;
+  color: var(--text-muted);
+  font-weight: 600;
+  font-size: 14px;
+  border-bottom: 2px solid var(--border-color);
+}
+
+td {
+  border-bottom: 1px solid var(--border-color);
+  color: var(--text-main);
+  font-size: 15px;
+}
+
+tr:last-child td {
+  border-bottom: none;
+}
+
+/* ===============================
+   GALERI (KARTU)
+================================*/
+.card-section {
+  width: 90%;
+  max-width: 1100px;
+  margin: 40px auto;
+}
+
+.card-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(265px, 1fr));
+  gap: 24px;
+  background: transparent; /* Menghapus background abu-abu pekat tua */
+  padding: 0;
+}
+
+.card {
+  background: var(--bg-card);
+  border-radius: var(--radius);
+  border: 1px solid var(--border-color);
+  box-shadow: var(--shadow-sm);
+  overflow: hidden;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-md);
+}
+
+.card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+
+.card p {
+  padding: 16px;
+  font-size: 14px;
+  color: var(--text-main);
+  text-align: left;
+}
+
+/* Video */
+.video-container {
+  margin: 30px auto;
+  text-align: center;
+}
+
+.video-container iframe {
+  width: 100%;
+  max-width: 700px;
+  height: 390px;
+  border-radius: var(--radius);
+  border: 1px solid var(--border-color);
+  box-shadow: var(--shadow-md);
+}
+
+/* ===============================
+   FORM FEEDBACK
+================================*/
+form {
+  width: 90%;
+  max-width: 600px;
+  background: var(--bg-card);
+  margin: 40px auto;
+  padding: 30px;
+  border-radius: var(--radius);
+  border: 1px solid var(--border-color);
+  box-shadow: var(--shadow-md);
+}
+
+form label {
+  font-weight: 500;
+  color: var(--text-main);
+  margin-bottom: 8px;
+  text-align: left;
+  display: block;
+  font-size: 14px;
+}
+
+input, textarea, select {
+  width: 100%;
+  padding: 12px;
+  border-radius: 8px;
+  border: 1px solid var(--border-color);
+  font-size: 14px;
+  font-family: inherit;
+  background-color: #f8fafc;
+  margin-bottom: 20px;
+  transition: all 0.2s ease;
+}
+
+input:focus, textarea:focus, select:focus {
+  outline: none;
+  border-color: var(--primary);
+  background-color: #ffffff;
+  box-shadow: 0 0 0 3px rgba(79, 70, 229, 0.1);
+}
+
+button {
+  width: 100%; /* Tombol dibuat full width di form agar tampak modern */
+  padding: 12px;
+  border: none;
+  border-radius: 8px;
+  font-weight: 600;
+  background: var(--primary);
+  color: white;
+  cursor: pointer;
+  font-size: 15px;
+  transition: background 0.2s ease;
+}
+
+button:hover {
+  background: var(--primary-hover);
+}
+
+/* ===============================
+   FOOTER
+================================*/
+footer {
+  margin-top: 80px;
+  background: var(--bg-card);
+  color: var(--text-muted);
+  padding: 24px;
+  border-top: 1px solid var(--border-color);
+  text-align: center;
+  font-size: 14px;
+}
+
+/* ===============================
+   RESPONSIVE DESIGN
+================================*/
+@media (max-width: 768px) {
+  body {
+    padding-bottom: 40px;
+  }
+  
+  .kotak, form {
+    padding: 20px;
+  }
+
+  .video-container iframe {
+    height: 250px;
+  }
+}
+
+@media (max-width: 600px) {
+  .nav {
+    gap: 6px;
+  }
+
+  .nav a {
+    flex-grow: 1;
+    text-align: center;
+    padding: 8px 12px;
+    font-size: 13px;
+  }
+}
